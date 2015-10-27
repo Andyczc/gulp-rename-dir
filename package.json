@@ -1,0 +1,44 @@
+{
+  "name": "gulp-rename-dir",
+  "version": "0.0.1",
+  "description": "rename dist name to bak, rename tmp to dist",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.magicare.me:node-modules/gulp-rename-dir.git"
+  },
+  "author": {
+    "name": "Gavin",
+    "email": "germany213@gmail.com",
+    "url": "http://germanyt.com"
+  },
+  "contributors": [
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "file",
+    "files"
+  ],
+  "dependencies": {
+    "rimraf": "^2.4.3"
+  },
+  "devDependencies": {
+    
+  },
+  "homepage": "http://gitlab.magicare.me/node-modules/gulp-rename-dir",
+  "maintainers": [
+    {
+      "name": "Gavin",
+      "email": "germany213@gmail.com"
+    }
+  ],
+  "readme": "ERROR: No README data found!"
+}
