@@ -31,7 +31,6 @@
     "rimraf": "^2.4.3"
   },
   "devDependencies": {
-    "rimraf": "^2.4.3"
   },
   "homepage": "http://gitlab.magicare.me/node-modules/gulp-rename-dir",
   "maintainers": [
