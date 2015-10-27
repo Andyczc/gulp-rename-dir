@@ -50,9 +50,9 @@ module.exports = function (tmpPath, destPath, bakPath, opts, callback) {
 	
 	opts.cwd = opts.cwd || process.cwd();
 
-	tmpPath = path.resolve(otps.cwd, tmpPath);
-	destPath = path.resolve(otps.cwd, destPath);
-	bakPath = path.resolve(otps.cwd, bakPath);
+	tmpPath = path.resolve(opts.cwd, tmpPath);
+	destPath = path.resolve(opts.cwd, destPath);
+	bakPath = path.resolve(opts.cwd, bakPath);
 
 	if(fs.existsSync(destPath)){
 		if(fs.existsSync(bakPath)){
