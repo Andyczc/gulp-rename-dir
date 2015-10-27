@@ -9,7 +9,7 @@ var bakBuild = function(tmpPath, destPath, bakPath, cb){
             console.log('原部署目录重命名失败');
             cb();
         } else {
-            creatBuild(tmpPath, destPath, bakPath);
+            creatBuild(tmpPath, destPath, bakPath, cb);
         }
     });
 };
@@ -20,7 +20,7 @@ var creatBuild = function(tmpPath, destPath, bakPath, cb){
             console.log('新部署目录重命名失败，网站已经无法访问，请尽快解决');
             cb();
         } else {
-            console.log('部署完成');
+            // console.log('部署完成');
             rmDir(bakPath, cb);
         }
     });
@@ -46,8 +46,8 @@ module.exports = function (tmpPath, destPath, bakPath, opts, callback) {
 		throw new gutil.PluginError('gulp-rename-dir', '`tmpPath` and `destPath` required');
 	}
 
-	bakPath = bakPath || (path.dirname(destPath) + '_bak')
-	
+	bakPath = bakPath || (path.dirname(destPath) + '/dist_bak_'+ Date.now());
+
 	opts.cwd = opts.cwd || process.cwd();
 
 	tmpPath = path.resolve(opts.cwd, tmpPath);
@@ -59,7 +59,9 @@ module.exports = function (tmpPath, destPath, bakPath, opts, callback) {
 			rmDir(bakPath, function(){
 				bakBuild(tmpPath, destPath, bakPath, callback);
 			});
-		}
+		} else {
+            bakBuild(tmpPath, destPath, bakPath, callback);
+        }
 	} else {
 		creatBuild(tmpPath, destPath, bakPath, callback);
 	}
