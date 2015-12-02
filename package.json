@@ -1,6 +1,6 @@
 {
   "name": "gulp-rename-dir",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rename dist name to bak, rename tmp to dist",
   "license": "MIT",
   "repository": {

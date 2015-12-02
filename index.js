@@ -21,7 +21,8 @@ var creatBuild = function(tmpPath, destPath, bakPath, cb){
             cb();
         } else {
             // console.log('部署完成');
-            rmDir(bakPath, cb);
+            // rmDir(bakPath, cb);
+            cb();
         }
     });
 };
